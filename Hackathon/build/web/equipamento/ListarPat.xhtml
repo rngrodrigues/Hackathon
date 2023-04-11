@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+      <h:head>
+        <title><ui:insert name="title">Hackathon SNNE 2021/1</ui:insert></title>
+        <link rel="stylesheet" href="../resources/css/jsfcrud.css"></link>
+        <h:outputScript library="js" name="jsfcrud.js"/>
+    </h:head>
+    <div class="card">
+        <h:form>
+            <p:growl id="messages"/>
+        </h:form>
+    </div>
+    
+        <ui:composition template="/template.xhtml">
+            
+            
+
+        <ui:define name="title">
+            <h:outputText value="Patrimônios"></h:outputText>
+        </ui:define>
+
+        <ui:define name="body">
+            
+            <h:form style=" margin: 150px 300px 150px 350px;" id="equipamentoListForm">
+                <div><h2>
+                Lista de Equipamentos
+                </h2></div>
+                    <p:dataTable id="datalist" value="#{equipamentoController.items}" var="item"
+                                 selectionMode="single" selection="#{equipamentoController.selected}"
+                                 paginator="true"
+                                 rowKey="#{item.id}"
+                                 rows="10"
+                                 
+                                 rowsPerPageTemplate="10,20,30,40,50"
+                                 >
+                        <p:column sortBy="#{item.id}">
+                            <f:facet name="header">
+                                <h:outputText value="Código do Patrimônio"/>
+                            </f:facet>
+                            <h:outputText value="#{item.id}"/>
+                        </p:column>
+                        <p:column  sortBy="#{item.patrimony}">
+                            <f:facet name="header">
+                                <h:outputText value="Patrimônio"/>
+                            </f:facet>
+                            <h:outputText value="#{item.patrimony}"/>
+                        </p:column>
+                        <p:column  sortBy="#{item.tipo}">
+                            <f:facet name="header">
+                                <h:outputText value="Tipo"/>
+                            </f:facet>
+                            <h:outputText value="#{item.tipo}"/>
+                        </p:column>
+                        <p:column  sortBy="#{item.description}">
+                            <f:facet name="header">
+                                <h:outputText value="Descrição"/>
+                            </f:facet>
+                            <h:outputText value="#{item.description}"/>
+                        </p:column>
+                        <p:column  sortBy="#{item.funFk}">
+                            <f:facet name="header">
+                                <h:outputText value="CPF"/>
+                            </f:facet>
+                            <h:outputText value="#{item.funFk}"/>
+                        </p:column>
+                        <f:facet name="footer">
+                            <h:link outcome="/equipamento/ListarPat"/>
+                            <p:commandButton id="createButton" styleClass="Botao" icon="ui-icon-plus"   value="Adicionar" actionListener="#{equipamentoController.prepareCreate}" onclick="addPatrimonio()"/>
+                            <p:commandButton id="editButton"   styleClass="Botao" icon="ui-icon-pencil" value="Editar" disabled="#{empty equipamentoController.selected}" onclick="editPatrimonio()"/>
+                            <p:commandButton id="deleteButton" styleClass="Botao" icon="ui-icon-trash"  value="Excluir" actionListener="#{equipamentoController.destroy()}" update=":growl,datalist" disabled="#{empty funcionarioController.selected}"/>
+                        </f:facet>
+                    </p:dataTable>
+                   <div class="buton">
+                <h:link class="home" outcome="/index.xhtml" value="HOME"/>
+                </div>
+            </h:form>
+        </ui:define>
+    </ui:composition>
+</html>

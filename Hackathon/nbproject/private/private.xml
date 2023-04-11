@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="2">
+        <file>
+            <url>web/funcionario/Incluir.xhtml</url>
+            <bookmark id="2">
+                <name/>
+                <line>0</line>
+                <key/>
+            </bookmark>
+        </file>
+        <file>
+            <url>src/java/dao/Funcionario.java</url>
+            <bookmark id="1">
+                <name/>
+                <line>0</line>
+                <key/>
+            </bookmark>
+        </file>
+    </editor-bookmarks>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/Users/rgrodrigues2/Downloads/Hackathon(3)/Hackathon/web/funcionario/Editar.xhtml</file>
+            <file>file:/C:/Users/rgrodrigues2/Downloads/Hackathon(3)/Hackathon/web/resources/js/jsfcrud.js</file>
+            <file>file:/C:/Users/rgrodrigues2/Downloads/Hackathon(3)/Hackathon/src/java/bean/EquipamentoFacade.java</file>
+            <file>file:/C:/Users/rgrodrigues2/Downloads/Hackathon(3)/Hackathon/web/resources/css/listar.css</file>
+            <file>file:/C:/Users/rgrodrigues2/Downloads/Hackathon(3)/Hackathon/web/template.xhtml</file>
+            <file>file:/C:/Users/rgrodrigues2/Downloads/Hackathon(3)/Hackathon/web/funcionario/Incluir.xhtml</file>
+            <file>file:/C:/Users/rgrodrigues2/Downloads/Hackathon(3)/Hackathon/web/funcionario/Listar.xhtml</file>
+            <file>file:/C:/Users/rgrodrigues2/Downloads/Hackathon(3)/Hackathon/src/java/controller/EquipamentoController.java</file>
+            <file>file:/C:/Users/rgrodrigues2/Downloads/Hackathon(3)/Hackathon/web/equipamento/ListarPat.xhtml</file>
+            <file>file:/C:/Users/rgrodrigues2/Downloads/Hackathon(3)/Hackathon/web/index.xhtml</file>
+            <file>file:/C:/Users/rgrodrigues2/Downloads/Hackathon(3)/Hackathon/src/java/dao/Funcionario.java</file>
+            <file>file:/C:/Users/rgrodrigues2/Downloads/Hackathon(3)/Hackathon/src/java/dao/Equipamento.java</file>
+            <file>file:/C:/Users/rgrodrigues2/Downloads/Hackathon(3)/Hackathon/src/java/controller/FuncionarioController.java</file>
+            <file>file:/C:/Users/rgrodrigues2/Downloads/Hackathon(3)/Hackathon/web/resources/css/editar.css</file>
+            <file>file:/C:/Users/rgrodrigues2/Downloads/Hackathon(3)/Hackathon/web/equipamento/IncluirPat.xhtml</file>
+            <file>file:/C:/Users/rgrodrigues2/Downloads/Hackathon(3)/Hackathon/web/equipamento/EditarPat.xhtml</file>
+            <file>file:/C:/Users/rgrodrigues2/Downloads/Hackathon(3)/Hackathon/src/java/bean/FuncionarioFacade.java</file>
+        </group>
+    </open-files>
+</project-private>

@@ -1,0 +1,135 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <link rel="shortcut icon" href="resources/assets/logo.png"/>
+        <title>Página inicial</title>
+     
+    </h:head>
+    <style>
+        /* Estilos para o corpo da página */
+.body-a {
+    background-color: #5438a6; /* cor roxa */
+    color: black; /* cor preta para o texto */
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Estilos para o título da página */
+.titulo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 40px 0;
+     font-weight: 700;
+      font-size: 5rem;
+}
+
+#logo {
+    height: 50px;
+    margin-right: 10px;
+}
+
+h1 {
+    font-size: 40px;
+    font-weight: bold;
+    color: white; /* cor branca */
+    margin: 0;
+}
+
+/* Estilos para o conteúdo principal */
+.corpo {
+max-width: 800px;
+width: 90%;
+height: auto;
+margin: 0 auto;
+padding: 20px;
+background-color: #f3f0fc;
+border-radius: 10px;
+box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+box-sizing: border-box;
+}
+
+
+
+
+h2 {
+ font-size: 24px;
+    font-weight: bold;
+    color: #8c56b3; /* cor roxa */
+    padding: 10px 20px;
+    margin: 0 0 20px;
+    border-radius: 5px;
+}
+
+article {
+    font-size: 15px;
+    line-height: 1.5;
+    margin: 0 0 20px;
+}
+
+h3 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #8c56b3; /* cor roxa */
+    padding: 10px 20px;
+    margin: 0 0 20px;
+    border-radius: 5px;
+}
+
+/* Estilos para os botões */
+.botao {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0 0;
+}
+
+.link {
+    background-color: #9b59b6; /* cor roxa */
+    color: #fff; /* cor branca */
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 18px;
+    transition: all 0.3s ease;
+}
+
+.link:hover {
+    background-color: #2c3e50; /* cor azul escura */
+    color: #fff; /* cor branca */
+}
+.footer {
+background-color: #5438a6; /* cor roxa */
+color: white; /* cor branca para o texto */
+font-family: Arial, sans-serif;
+font-size: 14px;
+line-height: 1.5;
+padding: 20px;
+margin-top: 50px;
+}
+    </style>
+    
+    
+    <h:body class="body-a" >
+        <div class="titulo">      
+<img id="logo" src="resources/assets/logo.png" alt="Stefanini Logo"></img>
+	<h1>Stefanini</h1>
+        </div>
+        <div class="corpo">
+	<h2>Como funciona essa ferramenta?</h2>
+        <article><p>A ferramenta é uma solução eficiente para a gestão de informações de funcionários e equipamentos de uma empresa em uma única tabela. Com ela, é possível cadastrar e gerenciar os dados dos funcionários, como nome, e-mail, CPF e função. Além disso, a ferramenta também permite o cadastro e gestão dos equipamentos utilizados na empresa, como computadores, impressoras, telefones, entre outros. Além do cadastro, a ferramenta também permite a edição e exclusão dos dados cadastrados. Para editar um funcionário ou equipamento já cadastrado, o usuário deverá clicar no botão "Editar" da linha correspondente na tabela, fazer as alterações necessárias e clicar em "Salvar". Já para excluir um funcionário ou equipamento, o usuário deverá clicar no botão "Excluir" da linha correspondente e confirmar a exclusão. </p> </article>
+          <h3> Como utilizar a ferramenta? </h3>
+          <article><p>A utilização da ferramenta é bastante simples e intuitiva. Para começar, o usuário precisa cadastrar as informações dos funcionários e patrimônios na plataforma utilizando os botões respectivos. Ao cadastrar esses dados, a ferramenta irá armazená-los em um único lugar, uma vez que as informações estejam cadastradas, é possível visualizá-las e gerenciá-las facilmente. A ferramenta é extremamente fácil de utilizar e permite a gestão eficiente de todas as informações importantes da empresa. Com ela, é possível manter todos os dados organizados e atualizados em um único lugar, facilitando o trabalho da equipe responsável pela gestão de pessoal e equipamentos.Para utilizar a ferramenta, basta acessá-la por meio do link fornecido e fazer o login com as credenciais de acesso. Em seguida, o usuário poderá visualizar todos os dados já cadastrados e adicionar novos funcionários e equipamentos por meio dos botões correspondentes. É importante preencher todos os campos necessários corretamente para garantir que as informações estejam completas e atualizadas. </p> </article>
+          <div class="botao">
+
+                        <h:link class="link" outcome="/funcionario/Listar.xhtml" value="Funcionários"/>
+                        <h:link class="link" outcome="/equipamento/ListarPat.xhtml" value="Patrimônios"/>
+        </div>
+        </div>
+        
+    </h:body>
+</html>
+

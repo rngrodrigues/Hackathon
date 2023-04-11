@@ -1,0 +1,103 @@
+      /* Estilos para o corpo da página */
+.body-a {
+    background-color: #5438a6; /* cor roxa */
+    color: black; /* cor preta para o texto */
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Estilos para o título da página */
+.titulo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 40px 0;
+}
+
+#logo {
+    height: 50px;
+    margin-right: 10px;
+}
+
+h1 {
+    font-size: 40px;
+    font-weight: bold;
+    color: white; /* cor branca */
+    margin: 0;
+}
+
+/* Estilos para o conteúdo principal */
+.corpo {
+max-width: 800px;
+width: 90%;
+height: auto;
+margin: 0 auto;
+padding: 20px;
+background-color: #f3f0fc;
+border-radius: 10px;
+box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+box-sizing: border-box;
+}
+
+@media only screen and (max-width: 600px) {
+.corpo {
+padding: 10px;
+}
+}
+
+h2 {
+ font-size: 24px;
+    font-weight: bold;
+    color: #8c56b3; /* cor roxa */
+    padding: 10px 20px;
+    margin: 0 0 20px;
+    border-radius: 5px;
+}
+
+article {
+    font-size: 15px;
+    line-height: 1.5;
+    margin: 0 0 20px;
+}
+
+h3 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #8c56b3; /* cor roxa */
+    padding: 10px 20px;
+    margin: 0 0 20px;
+    border-radius: 5px;
+}
+
+/* Estilos para os botões */
+.botao {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0 0;
+}
+
+.link {
+    background-color: #9b59b6; /* cor roxa */
+    color: #fff; /* cor branca */
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 18px;
+    transition: all 0.3s ease;
+}
+
+
+.link:hover {
+    background-color: #2c3e50; /* cor azul escura */
+    color: #fff; /* cor branca */
+}
+.footer {
+background-color: #5438a6; /* cor roxa */
+color: white; /* cor branca para o texto */
+font-family: Arial, sans-serif;
+font-size: 14px;
+line-height: 1.5;
+padding: 20px;
+margin-top: 50px;
+}

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+      <h:head>
+        <title><ui:insert name="title">Hackathon SNNE 2021/1</ui:insert></title>
+        <h:outputStylesheet library="css" name="jsfcrud.css"/>
+        <h:outputScript library="js" name="jsfcrud.js"/>
+    </h:head>
+    <div class="card">
+        <h:form>
+            <p:growl id="messages"/>
+        </h:form>
+    </div>
+        <ui:composition template="/template.xhtml" >
+
+
+        <ui:define name="title">
+            <h:outputText value="Funcionários"></h:outputText>
+        </ui:define>
+                    
+        <ui:define name="body">
+            <h:form id="funcionarioListForm" style=" margin: 150px 300px 150px 350px;">
+                
+                <div class="titulo2"
+                     ><h2>
+                Lista de Funcionários
+                </h2></div>
+                    <p:dataTable id="datalist" value="#{funcionarioController.items}" var="item"
+                                 selectionMode="single" selection="#{funcionarioController.selected}"
+                                 paginator="true"
+                                 rowKey="#{item.id}"
+                                 rows="10"
+                                 
+                                 rowsPerPageTemplate="10,20,30,40,50"
+                                 >
+                        <p:column  sortBy="#{item.id}">
+                            <f:facet name="header">
+                                <h:outputText value="ID"/>
+                            </f:facet>
+                            <h:outputText value="#{item.id}"/>
+                        </p:column>
+                        <p:column  sortBy="#{item.name}">
+                            <f:facet name="header">
+                                <h:outputText value="Nome"/>
+                            </f:facet>
+                            <h:outputText value="#{item.name}"/>
+                        </p:column>
+                        <p:column  sortBy="#{item.cpf}">
+                            <f:facet name="header">
+                                <h:outputText value="CPF"/>
+                            </f:facet>
+                            <h:outputText value="#{item.cpf}"/>
+                        </p:column>
+                        <p:column  sortBy="#{item.email}">
+                            <f:facet name="header">
+                                <h:outputText value="E-mail"/>
+                            </f:facet>
+                            <h:outputText value="#{item.email}"/>
+                        </p:column>
+                        <p:column  sortBy="#{item.cargo}">
+                            <f:facet name="header">
+                                <h:outputText value="Cargo"/>
+                            </f:facet>
+                            <h:outputText value="#{item.cargo}"/>
+                        </p:column>
+                        <f:facet name="footer">
+                            <h:link outcome="/funcionario/Listar"/>
+                            <p:commandButton id="createButton" styleClass="Botao" icon="ui-icon-plus"   value="Incluir" actionListener="#{funcionarioController.prepareCreate}" onclick="addFuncionario()"/>
+                            <p:commandButton id="editButton"   styleClass="Botao" icon="ui-icon-pencil" value="Editar" disabled="#{empty funcionarioController.selected}" onclick="editFuncionario()"/>
+                            <p:commandButton id="deleteButton" styleClass="Botao" icon="ui-icon-trash"  value="Excluir" actionListener="#{funcionarioController.destroy()}" update=":growl,datalist" disabled="#{empty funcionarioController.selected}"/>
+                        </f:facet>
+                    
+                    </p:dataTable>
+                <div class="buton">
+                <h:link class="home" outcome="/index.xhtml" value="HOME"/>
+                </div>
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+    
+</html>

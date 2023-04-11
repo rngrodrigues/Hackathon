@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Quicksand:wght@300&family=Ubuntu&display=swap');
+body{
+    height: 90vh;
+}
+.main{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 90vw;
+}
+.card{
+    margin: 0px 30px;
+}
+
+html{
+    width: 95%;
+    height: 100%;
+    background: #5438a6;
+}
+
+.titulo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 40px 0;
+     font-weight: 700;
+      font-size: 5rem;
+}
+
+#logo {
+    height: 50px;
+    margin-right: 10px;
+}
+
+h1 {
+    
+        font-family: Arial, sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+    color: white; /* cor branca */
+    margin: 0;
+}
+
+h2 {
+    font-family: Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background: #c9c9c9;
+    border: 1px solid;
+    margin-top:100px;
+}
+
+* {
+    box-sizing: border-box;
+    outline: none;
+}
+
+ .home {
+     margin-top: 150px;
+     margin-right:750px;
+     margin-bottom:150px;
+     margin-left:750px;
+ font-family: Arial, sans-serif;
+    background-color: white; /* cor roxa */
+    color:   black; /* cor branca */
+    padding: 10px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+
+    
+}
+.buton{
+     margin-top: 150px;
+   
+}
+
+.ui-widget {
+    font-size: 12px !important;
+}
+.ui-layout-north {
+    z-index: 20 !important;
+    overflow: visible !important;;
+}
+.ui-layout-north .ui-layout-unit-content {
+    overflow: visible !important;
+}
+.ui-widget-header {
+    text-align: center;
+    text-transform: uppercase;
+}
+.ui-button {
+    margin-top: 10px !important;
+}
+
