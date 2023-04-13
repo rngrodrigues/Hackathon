@@ -101,7 +101,7 @@ public class EquipamentoController implements Serializable {
     public void limparIncluirPat(){
             selected.setPatrimony("");
             selected.setDescription("");
-            selected.setFunFk("");
+            selected.setFunFk(null);
             selected.setTipo("");
             
         }

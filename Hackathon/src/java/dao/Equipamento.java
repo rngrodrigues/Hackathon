@@ -6,14 +6,18 @@
 package dao;
 
 import java.io.Serializable;
+import java.util.List;
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
@@ -45,11 +49,6 @@ public class Equipamento implements Serializable {
     @Column(name = "id")
     private Long id;
     
-    @Basic(optional = false)
-    @Size(min = 1, max = 50)
-    @Column(name = "funFk")
-    @CPF
-    private String funFk;
     
     @Basic
     @NotNull
@@ -70,7 +69,10 @@ public class Equipamento implements Serializable {
     @Column(name= "patrimony")
     private String patrimony;
     
-    
+    @ManyToOne
+    @JoinColumn (name = "funcionario_fk")
+   private Funcionario funFk;
+ 
     
     public Equipamento() {
     }
@@ -79,7 +81,7 @@ public class Equipamento implements Serializable {
         this.id = id;
     }
 
-    public Equipamento(Long id, String patrimony, String funFk, String description, String tipo) {
+    public Equipamento(Long id, String patrimony, Funcionario funFk, String description, String tipo) {
         this.id = id;
         this.patrimony = patrimony;
         this.funFk = funFk;
@@ -112,11 +114,11 @@ public class Equipamento implements Serializable {
         this.description = description;
     }
     
-    public String getFunFk () {
+    public Funcionario getFunFk () {
         return funFk;
     }
 
-    public void setFunFk (String funFk) {
+    public void setFunFk (Funcionario funFk) {
         this.funFk = funFk;
     }
     
